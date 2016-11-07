@@ -26,7 +26,7 @@ class TodoController < ApplicationController
 
   def save
     @todo = Todo.find(params[:id])
-    @todo.update(:title => params.permit(:title, :text))
+    @todo.update(:title => params[:title])
     redirect_to :action => 'index'
   end
 
