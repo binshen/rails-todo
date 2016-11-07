@@ -3,8 +3,8 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title><%= @site_name %></title>
-  <link href="stylesheets/reset.css" rel="stylesheet" type="text/css" />
-  <link href="stylesheets/index/style.css" rel="stylesheet" type="text/css" />
+  <% stylesheet_path "reset" %>
+  <% stylesheet_path "index/style" %>
 </head>
 <body>
 <div class="page">
@@ -38,7 +38,7 @@
 
       <div class="box post">
         <h2>新增</h2>
-        <form action="/todo/new" method="post" id="post_new">
+        <form action="/todo" method="post" id="post_new">
           <p><input type="text" name="title" class="long_txt" /></p>
           <p><input type="submit" class="submit" value="添加" /></p>
         </form>
