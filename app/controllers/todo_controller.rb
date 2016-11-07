@@ -8,7 +8,8 @@ class TodoController < ApplicationController
   end
 
   def create
-    @todo = Todo.new(:title => params.permit(:title, :text), :finished => 0, :post_date => DateTime.now)
+    #@todo = Todo.new(:title => params.permit(:title, :text), :finished => 0, :post_date => DateTime.now)
+    @todo = Todo.new(:title => params[:title], :finished => 0, :post_date => DateTime.now)
     @todo.save
     redirect_to :action => 'index'
   end
